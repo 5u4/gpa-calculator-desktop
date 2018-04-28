@@ -4,10 +4,8 @@
 
 A desktop version of GPA Calculator
 
+![](screenshots/v1.0.1/mac/main.png)
+
 ## Download
 
 [Release](https://github.com/senhungwong/gpa-calculator-desktop/releases)
-
-## Screenshots
-
-![](screenshots/v1.0.0/mac/main.png)

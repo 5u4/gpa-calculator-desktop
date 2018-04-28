@@ -1,5 +1,5 @@
 <template>
-    <img :src="logo" style="maxWidth: 200px;">
+    <img id="logo" :src="logo" style="maxWidth: 200px;">
 </template>
 
 <script>
@@ -95,5 +95,7 @@ export default {
 </script>
 
 <style>
-
+#logo {
+    pointer-events: none;
+}
 </style>
