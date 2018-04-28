@@ -73,7 +73,7 @@
                 <v-flex>
                     <v-layout column>
                         <v-flex>
-                            <v-text-field v-on:keyup.enter="add()" v-model="label" label="Label"></v-text-field>
+                            <v-text-field v-on:keyup.enter="add()" v-model="course" label="Label"></v-text-field>
                         </v-flex>
                     </v-layout>
                 </v-flex>
@@ -92,7 +92,7 @@ export default {
         return {
             grade: null,
             credit: null,
-            label: null
+            course: null
         }
     },
     computed: {
@@ -112,13 +112,13 @@ export default {
             const course = {
                 grade: this.gradeMapper(this.grade), 
                 credit: this.credit + 1, 
-                label: this.label
+                course: this.course
             };
 
             this.$store.commit('addCourse', course);
             this.grade = null;
             this.credit = null;
-            this.label = null;
+            this.course = null;
         },
         gradeMapper(index) {
             const grades = [
@@ -133,7 +133,7 @@ export default {
             this.$store.commit('clearCourses');
             this.grade = null;
             this.credit = null;
-            this.label = null;
+            this.course = null;
         }
     }
 }

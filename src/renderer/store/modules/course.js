@@ -25,12 +25,12 @@ const getters = {
 }
 
 const mutations = {
-    /* payload: {grade: Number, credit: Number, label: String} */
+    /* payload: {grade: Number, credit: Number, course: String} */
     addCourse(state, payload) {
         state.courses.push({
             grade: payload.grade,
             credit: payload.credit,
-            label: payload.label
+            course: payload.course
         });
     },
     clearCourses(state) {
