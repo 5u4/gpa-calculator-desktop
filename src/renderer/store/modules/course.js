@@ -1,5 +1,5 @@
 const state = {
-    courses: [{grade: "A+", credit: 3}, {grade: "B", credit: 5}]
+    courses: []
 }
 
 const getters = {
@@ -24,7 +24,22 @@ const getters = {
     }
 }
 
+const mutations = {
+    /* payload: {grade: Number, credit: Number, label: String} */
+    addCourse(state, payload) {
+        state.courses.push({
+            grade: payload.grade,
+            credit: payload.credit,
+            label: payload.label
+        });
+    },
+    clearCourses(state) {
+        state.courses = [];
+    }
+}
+
 export default {
     state,
-    getters
+    getters,
+    mutations
 }

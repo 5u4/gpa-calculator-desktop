@@ -1,14 +1,21 @@
 <template>
     <v-card flat class="my-2">
-        <v-card-title primary-title>
-            Course Adder
-        </v-card-title>
+        <v-card-text>
+            Add a Course
+        </v-card-text>
+        <v-container>
+            <course-maker></course-maker>
+        </v-container>
     </v-card>
 </template>
 
 <script>
-export default {
+import CourseMaker from './CourseMaker';
 
+export default {
+    components: {
+        CourseMaker
+    }
 }
 </script>
 
