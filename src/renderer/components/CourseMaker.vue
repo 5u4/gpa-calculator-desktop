@@ -73,7 +73,7 @@
                 <v-flex>
                     <v-layout column>
                         <v-flex>
-                            <v-text-field v-on:keyup.enter="add()" v-model="course" label="Label"></v-text-field>
+                            <v-text-field v-on:keyup.enter="add()" v-model="course" label="Course"></v-text-field>
                         </v-flex>
                     </v-layout>
                 </v-flex>
