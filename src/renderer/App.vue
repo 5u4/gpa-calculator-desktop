@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <div id="frame"></div>
         <v-app dark>
             <v-content>
                 <v-container>
@@ -28,5 +29,17 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
+    -webkit-user-select: none;
+}
+html::-webkit-scrollbar {
+    display: none
+}
+button {
+  -webkit-app-region: no-drag;
+}
+#frame {
+    -webkit-app-region: drag;
+    height: 30px;
+    background-color: rgb(48, 48, 48);
 }
 </style>
