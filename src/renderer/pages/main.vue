@@ -3,7 +3,7 @@
         <v-layout column>
             <!-- Logo -->
             <v-flex>
-                <logo></logo>
+                <logo :block="false" :dark="true" :standard="isStandard"></logo>
             </v-flex>
             <!-- Scale Changer -->
             <v-flex>
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import store from '../store';
 import Logo from '../components/Logo';
 import ScaleChanger from '../components/ScaleChanger';
 import StatsShower from '../components/StatsShower';
@@ -39,6 +40,11 @@ export default {
         StatsShower,
         CourseAdder,
         CoursesShower
+    },
+    computed: {
+        isStandard() {
+            return this.$store.getters.getScale == 4.00;
+        }
     }
 }
 </script>
